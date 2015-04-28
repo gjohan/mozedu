@@ -1,0 +1,188 @@
+*, *:after, *:before
+
+.clearfix:before, .clearfix:after
+
+.clearfix
+  &:after
+
+@font-face
+  font-family 'Fira Sans'
+  src url('../fonts/eot/FiraSans-Light.eot')
+  font-weight 300
+  font-style normal
+
+body
+  background #fff
+  color #fff
+  font-weight 400
+  font-size 1em
+  font-family 'Fira Sans'
+
+a
+  outline none
+  color #3498db
+  text-decoration none
+
+a:hover, a:focus
+  color #528cb3
+
+section
+  padding 1em
+  text-align center
+
+.content
+  margin 0 auto
+  max-width 1000px
+  & > h2
+    clear both
+    margin 0
+    padding 4em 1% 0
+    color #484B54
+    font-weight 800
+    font-size 1.5em
+    &:first-child
+      padding-top 0em
+
+.container
+  & > header
+    margin 0 auto
+    padding 2em
+    text-align center
+    background rgba(0,0,0,0.01)
+    h1
+      font-size 2.625em
+      line-height 1.3
+      margin 0
+      font-weight 300
+      color #484B54
+    h3
+      font-weight 700
+      color #3498db
+
+.img1
+  position absolute
+  top 20px
+  left 20px
+  width 150px
+  height 100px
+
+.img2
+  position absolute
+  top 20px
+  right 20px
+  width 150px
+  height 70px
+
+.grid
+  position relative
+  clear both
+  margin 0 auto
+  padding 1em 0 4em
+  max-width 1000px
+  list-style none
+  text-align center
+  figure
+    position relative
+    float left
+    overflow hidden
+    margin 10px 1%
+    min-width 320px
+    max-width 480px
+    max-height 360px
+    width 48%
+    height auto
+    background #3085a3
+    text-align center
+    cursor pointer
+    display inline-block
+    float none
+    margin 10px auto
+    width 100%
+    img
+      position relative
+      display block
+      min-height 100%
+      max-width 100%
+      opacity 0.8
+    figcaption
+      padding 2em
+      color #fff
+      text-transform uppercase
+      font-size 1.25em
+      -webkit-backface-visibility hidden
+      backface-visibility hidden
+    h2
+      word-spacing -0.15em
+      font-weight 300
+      margin 0
+
+.grid figure figcaption::before,
+.grid figure figcaption::after
+  pointer-events none
+
+.grid figure figcaption,
+.grid figure figcaption > a
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+
+figure
+  &.efecto
+    z-index auto
+    overflow visible
+    background #000
+    &:before
+      box-shadow 0 3px 30px rgba(0,0,0,0.8)
+      opacity 0
+    figcaption
+      z-index 1
+    img
+      opacity 1
+      transition transform 0.35s
+      transform perspective(1000px) translate3d(0,0,0)
+    h2
+      position relative
+      margin-top 2em
+      padding 0.25em
+      background #fff
+      color #2d434e
+      &:before
+        box-shadow 0 1px 10px rgba(0,0,0,0.5)
+    &:hover
+      &:before
+        opacity 1
+      img
+        transform perspective(1000px) translate3d(0,0,21px)
+      h2
+        &:before
+          opacity 0
+
+figure.efecto:before,
+figure.efecto h2:before
+  position absolute
+  top 0
+  left 0
+  z-index -1
+  width 100%
+  height 100%
+  background #000
+  content ''
+  -webkit-transition opacity 0.35s
+  transition opacity 0.35s
+
+@media
+  screen
+    and
+      (max-width
+        &:
+          50em)
+            .content {
+		padding 0 10px
+            text-align center
+
+.img1,
+	.img2
+  display none
+
